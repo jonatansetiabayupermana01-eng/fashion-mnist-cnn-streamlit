@@ -4,7 +4,7 @@ Aplikasi Streamlit untuk mengklasifikasikan foto produk fashion ke 10 kelas Fash
 
 Online: https://fashion-mnist-kelompok4.streamlit.app
 
-## Dependensi
+## Req
 
 Python 3.10 sampai 3.13. Di Linux/macOS, jika tidak ada, skrip mengunduh Python 3.12 otomatis.
 
