@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# Setup + jalankan aplikasi (Linux/macOS). Pemakaian: bash run.sh
+# Setup + jalankan aplikasi (Linux/macOS).
 set -e
 cd "$(dirname "$0")"
 
-# NixOS: jalankan ulang skrip ini di dalam nix-shell (Python + library untuk TensorFlow)
+# NixOS
 if [ -e /etc/NIXOS ] && [ -z "$IN_NIX_SHELL" ]; then
   exec nix-shell shell.nix --run "bash run.sh"
 fi
@@ -16,7 +16,7 @@ for c in python3.12 python3.11 python3.13 python3.10 python3; do
   fi
 done
 if [ -z "$PY" ]; then
-  # Tidak ada Python 3.10-3.13: unduh Python 3.12 terpisah lewat uv (tidak mengubah Python sistem)
+  # Tidak ada Python 3.10-3.13: unduh Python 3.12
   echo "Python 3.10-3.13 tidak ditemukan. Mengunduh Python 3.12 lewat uv..."
   if ! command -v uv >/dev/null 2>&1; then
     curl -LsSf https://astral.sh/uv/install.sh | sh
