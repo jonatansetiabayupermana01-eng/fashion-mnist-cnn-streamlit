@@ -6,7 +6,7 @@ Online: https://fashion-mnist-kelompok4.streamlit.app
 
 ## Req
 
-Python 3.10 sampai 3.13. Di Linux/macOS,
+Python 3.10 - 3.13. Di Linux/macOS,
 
 Linux / macOS:
 
