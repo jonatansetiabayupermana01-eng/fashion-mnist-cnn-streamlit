@@ -10,7 +10,7 @@ Python 3.10 sampai 3.13. Di Linux/macOS, jika tidak ada, skrip mengunduh Python 
 
 ## Jalankan
 
-Linux / macOS / NixOS:
+Linux / macOS:
 
 ```
 git clone https://github.com/jonatansetiabayupermana01-eng/fashion-mnist-cnn-streamlit.git
