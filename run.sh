@@ -16,8 +16,14 @@ for c in python3.12 python3.11 python3.13 python3.10 python3; do
   fi
 done
 if [ -z "$PY" ]; then
-  echo "Butuh Python 3.10 sampai 3.13 (TensorFlow belum mendukung versi lain). Install dari https://www.python.org/downloads/"
-  exit 1
+  # Tidak ada Python 3.10-3.13: unduh Python 3.12 terpisah lewat uv (tidak mengubah Python sistem)
+  echo "Python 3.10-3.13 tidak ditemukan. Mengunduh Python 3.12 lewat uv..."
+  if ! command -v uv >/dev/null 2>&1; then
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    export PATH="$HOME/.local/bin:$PATH"
+  fi
+  uv python install 3.12
+  PY="$(uv python find 3.12)"
 fi
 echo "Memakai $($PY --version)"
 
