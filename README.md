@@ -25,6 +25,8 @@ cd fashion-mnist-cnn-streamlit
 bash run.sh
 ```
 
+Di NixOS, `bash run.sh` otomatis masuk ke `nix-shell` (lihat `shell.nix`) untuk menyediakan Python 3.12 dan library yang dibutuhkan TensorFlow.
+
 Skrip membuat virtual environment `.venv`, menginstal dependensi (sekali saja, sekitar 500 MB karena TensorFlow), lalu membuka aplikasi di http://localhost:8501. Jalankan perintah yang sama untuk membuka aplikasi lagi.
 
 Cara manual:

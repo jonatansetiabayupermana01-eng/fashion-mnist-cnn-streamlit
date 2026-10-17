@@ -3,6 +3,11 @@
 set -e
 cd "$(dirname "$0")"
 
+# NixOS: jalankan ulang skrip ini di dalam nix-shell (Python + library untuk TensorFlow)
+if [ -e /etc/NIXOS ] && [ -z "$IN_NIX_SHELL" ]; then
+  exec nix-shell shell.nix --run "bash run.sh"
+fi
+
 PY=""
 for c in python3.12 python3.11 python3.13 python3.10 python3; do
   if command -v "$c" >/dev/null 2>&1; then
