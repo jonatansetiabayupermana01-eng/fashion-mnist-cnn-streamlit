@@ -70,6 +70,6 @@ st.table(
 st.caption(
     "Catatan: model dilatih pada foto produk 28x28 grayscale dengan latar polos. "
     "Foto dengan latar ramai atau objek kecil dapat salah diklasifikasikan. "
-    "Pada uji 19 foto nyata, model benar 8 dari 19 (42%) dan cenderung menebak Bag. "
-    "Akurasi 90,7% hanya berlaku untuk data test Fashion-MNIST."
+    "Pada uji 19 foto nyata, model benar 7 dari 19 (37%) dan paling sering salah menebak Bag. "
+    "Akurasi 91,5% hanya berlaku untuk data test Fashion-MNIST."
 )
