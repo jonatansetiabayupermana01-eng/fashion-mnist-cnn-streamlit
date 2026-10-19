@@ -24,4 +24,4 @@ cd fashion-mnist-cnn-streamlit
 .\run.bat
 ```
 
-Buka http://localhost:8501 setelah muncul `Local URL`. Instalasi pertama mengunduh sekitar 500 MB.
+Buka http://localhost:8501
